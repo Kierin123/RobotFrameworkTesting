@@ -1,0 +1,87 @@
+*** Settings ***
+Documentation     This is a basic test
+Library           SeleniumLibrary
+Library           OperatingSystem
+#Resource          resource.robot
+
+*** Variables ***
+${username_standard}    standard_user
+${username_lock}        locked_out_user
+${username_problem}     problem_user
+${username_perf}        performance_glitch_user
+
+${password}          secret_sauce
+${URL}               https://www.saucedemo.com
+${BROWSER}           firefox
+${WELCOME_URL}       ${URL}/inventory.html
+
+*** Test Cases ***
+[TC-001] Open test browser
+    [Documentation]    Testing login in few cases
+    ...                1) invalid login
+    ...                2) invalid passwod
+    ...                3) empty pass
+    ...                4) empty login
+    ...                5) valid login and password
+    ...                6) check the adding to shopping container and check corectness
+    ...                7) logout
+
+    Launch Browser
+    Check Login Page Opened
+    Invalid Login       ${username_standard}3    ${password}
+    Invalid Login       ${username_standard}     ${password}8
+    Invalid Login       ${username_standard}     ${EMPTY}
+    Invalid Login       ${EMPTY}        ${password}
+    Invalid Login       ${username_lock}     ${password}
+    Valid Password      ${username_problem}     ${password}
+    Logout from Page
+    Valid Password      ${username_perf}     ${password}
+    Logout from Page
+    Valid Password      ${username_standard}     ${password}
+    Check Site
+    Logout from Page
+    Check Login Page Opened
+    Close Browser
+
+*** Keywords ***
+Launch Browser
+    Open Browser    ${URL}  ${BROWSER}
+    maximize browser window
+
+Login to Page
+    [Arguments]   ${login}        ${pass}
+    Input Text    id=user-name    ${login}
+    Input Text    id=password    ${pass}
+    Press Keys    id=login-button    \\13
+
+Valid Password
+    [Arguments]   ${login}        ${pass}
+    Login to Page               ${login}     ${pass}
+    Check Page opened correct
+
+Invalid Login
+    [Arguments]   ${login_invalid}        ${pass_invalid}
+    Login to Page               ${login_invalid}     ${pass_invalid}
+    Check Login Page Opened
+
+Logout from Page
+    press keys    id=react-burger-menu-btn    \\13
+    wait until element is visible   id=logout_sidebar_link   4   "Error! Page not opened!"
+    press keys    id=logout_sidebar_link    \\13
+
+Check Login Page Opened
+    wait until element is visible   id=user-name   5   "Error! Page not opened!"
+
+Check Page opened correct
+    wait until element is visible   id=shopping_cart_container   5   "Error! Page not opened!"
+
+Welcome Page Should Be Open
+    Location Should Be    ${WELCOME_URL}
+    Title Should Be    Swag Labs
+
+Check Site
+    press keys    identifier=add-to-cart-sauce-labs-backpack            \\13
+    press keys    identifier=add-to-cart-sauce-labs-bike-light          \\13
+    press keys    identifier=add-to-cart-sauce-labs-bolt-t-shirt        \\13
+    press keys    identifier=add-to-cart-sauce-labs-fleece-jacket       \\13
+    wait until element contains     class=shopping_cart_badge   4   5   "Error!"

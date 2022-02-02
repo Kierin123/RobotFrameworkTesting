@@ -1,0 +1,526 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.2 (Python 3.9.7 on linux)" generated="20211125 21:25:33.949" rpa="false" schemaversion="2">
+<suite id="s1" name="Lab2" source="/home/kierin/Documents/Repozytoria/0ZUT/Testowanie_oprogramowania/robot_framework/ZUT_2021/robot_demo/Dir_test/Lab2">
+<test id="s1-t1" name="[TC-001] Open test browser">
+<kw name="Launch Browser">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211125 21:25:34.124" level="INFO">Opening browser 'firefox' to base url 'https://www.saucedemo.com'.</msg>
+<msg timestamp="20211125 21:25:34.124" level="INFO">Firefox driver log is always forced to to: /home/kierin/Documents/Repozytoria/0ZUT/Testowanie_oprogramowania/robot_framework/ZUT_2021/robot_demo/Dir_test/geckodriver-4.log</msg>
+<status status="PASS" starttime="20211125 21:25:34.124" endtime="20211125 21:25:37.487"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20211125 21:25:37.490" endtime="20211125 21:25:37.805"/>
+</kw>
+<status status="PASS" starttime="20211125 21:25:34.123" endtime="20211125 21:25:37.806"/>
+</kw>
+<kw name="Check Login Page Opened">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>id=user-name</arg>
+<arg>5</arg>
+<arg>"Error! Page not opened!"</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211125 21:25:37.808" endtime="20211125 21:25:37.874"/>
+</kw>
+<status status="PASS" starttime="20211125 21:25:37.807" endtime="20211125 21:25:37.875"/>
+</kw>
+<kw name="Invalid Login">
+<arg>${username_standard}3</arg>
+<arg>${password}</arg>
+<kw name="Login to Page">
+<arg>${login_invalid}</arg>
+<arg>${pass_invalid}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=user-name</arg>
+<arg>${login}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211125 21:25:37.878" level="INFO">Typing text 'standard_user3' into text field 'id=user-name'.</msg>
+<status status="PASS" starttime="20211125 21:25:37.877" endtime="20211125 21:25:37.968"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=password</arg>
+<arg>${pass}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211125 21:25:37.970" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
+<status status="PASS" starttime="20211125 21:25:37.969" endtime="20211125 21:25:38.013"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>id=login-button</arg>
+<arg>\\13</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20211125 21:25:38.014" level="INFO">Sending key(s) ('\\13',) to id=login-button element.</msg>
+<msg timestamp="20211125 21:25:38.316" level="INFO">Sending keys \13</msg>
+<status status="PASS" starttime="20211125 21:25:38.013" endtime="20211125 21:25:38.335"/>
+</kw>
+<status status="PASS" starttime="20211125 21:25:37.876" endtime="20211125 21:25:38.335"/>
+</kw>
+<kw name="Check Login Page Opened">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>id=user-name</arg>
+<arg>5</arg>
+<arg>"Error! Page not opened!"</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211125 21:25:38.336" endtime="20211125 21:25:38.369"/>
+</kw>
+<status status="PASS" starttime="20211125 21:25:38.335" endtime="20211125 21:25:38.369"/>
+</kw>
+<status status="PASS" starttime="20211125 21:25:37.875" endtime="20211125 21:25:38.370"/>
+</kw>
+<kw name="Invalid Login">
+<arg>${username_standard}</arg>
+<arg>${password}8</arg>
+<kw name="Login to Page">
+<arg>${login_invalid}</arg>
+<arg>${pass_invalid}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=user-name</arg>
+<arg>${login}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211125 21:25:38.372" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<status status="PASS" starttime="20211125 21:25:38.372" endtime="20211125 21:25:38.462"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=password</arg>
+<arg>${pass}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211125 21:25:38.462" level="INFO">Typing text 'secret_sauce8' into text field 'id=password'.</msg>
+<status status="PASS" starttime="20211125 21:25:38.462" endtime="20211125 21:25:38.519"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>id=login-button</arg>
+<arg>\\13</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20211125 21:25:38.519" level="INFO">Sending key(s) ('\\13',) to id=login-button element.</msg>
+<msg timestamp="20211125 21:25:38.807" level="INFO">Sending keys \13</msg>
+<status status="PASS" starttime="20211125 21:25:38.519" endtime="20211125 21:25:38.822"/>
+</kw>
+<status status="PASS" starttime="20211125 21:25:38.371" endtime="20211125 21:25:38.822"/>
+</kw>
+<kw name="Check Login Page Opened">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>id=user-name</arg>
+<arg>5</arg>
+<arg>"Error! Page not opened!"</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211125 21:25:38.823" endtime="20211125 21:25:38.858"/>
+</kw>
+<status status="PASS" starttime="20211125 21:25:38.822" endtime="20211125 21:25:38.858"/>
+</kw>
+<status status="PASS" starttime="20211125 21:25:38.370" endtime="20211125 21:25:38.859"/>
+</kw>
+<kw name="Invalid Login">
+<arg>${username_standard}</arg>
+<arg>${EMPTY}</arg>
+<kw name="Login to Page">
+<arg>${login_invalid}</arg>
+<arg>${pass_invalid}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=user-name</arg>
+<arg>${login}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211125 21:25:38.861" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<status status="PASS" starttime="20211125 21:25:38.861" endtime="20211125 21:25:38.933"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=password</arg>
+<arg>${pass}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211125 21:25:38.934" level="INFO">Typing text '' into text field 'id=password'.</msg>
+<status status="PASS" starttime="20211125 21:25:38.933" endtime="20211125 21:25:38.956"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>id=login-button</arg>
+<arg>\\13</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20211125 21:25:38.957" level="INFO">Sending key(s) ('\\13',) to id=login-button element.</msg>
+<msg timestamp="20211125 21:25:39.242" level="INFO">Sending keys \13</msg>
+<status status="PASS" starttime="20211125 21:25:38.956" endtime="20211125 21:25:39.260"/>
+</kw>
+<status status="PASS" starttime="20211125 21:25:38.861" endtime="20211125 21:25:39.260"/>
+</kw>
+<kw name="Check Login Page Opened">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>id=user-name</arg>
+<arg>5</arg>
+<arg>"Error! Page not opened!"</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211125 21:25:39.261" endtime="20211125 21:25:39.290"/>
+</kw>
+<status status="PASS" starttime="20211125 21:25:39.260" endtime="20211125 21:25:39.290"/>
+</kw>
+<status status="PASS" starttime="20211125 21:25:38.859" endtime="20211125 21:25:39.290"/>
+</kw>
+<kw name="Invalid Login">
+<arg>${EMPTY}</arg>
+<arg>${password}</arg>
+<kw name="Login to Page">
+<arg>${login_invalid}</arg>
+<arg>${pass_invalid}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=user-name</arg>
+<arg>${login}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211125 21:25:39.296" level="INFO">Typing text '' into text field 'id=user-name'.</msg>
+<status status="PASS" starttime="20211125 21:25:39.296" endtime="20211125 21:25:39.322"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=password</arg>
+<arg>${pass}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211125 21:25:39.323" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
+<status status="PASS" starttime="20211125 21:25:39.322" endtime="20211125 21:25:39.373"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>id=login-button</arg>
+<arg>\\13</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20211125 21:25:39.374" level="INFO">Sending key(s) ('\\13',) to id=login-button element.</msg>
+<msg timestamp="20211125 21:25:39.658" level="INFO">Sending keys \13</msg>
+<status status="PASS" starttime="20211125 21:25:39.373" endtime="20211125 21:25:39.667"/>
+</kw>
+<status status="PASS" starttime="20211125 21:25:39.294" endtime="20211125 21:25:39.668"/>
+</kw>
+<kw name="Check Login Page Opened">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>id=user-name</arg>
+<arg>5</arg>
+<arg>"Error! Page not opened!"</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211125 21:25:39.670" endtime="20211125 21:25:39.702"/>
+</kw>
+<status status="PASS" starttime="20211125 21:25:39.668" endtime="20211125 21:25:39.702"/>
+</kw>
+<status status="PASS" starttime="20211125 21:25:39.291" endtime="20211125 21:25:39.702"/>
+</kw>
+<kw name="Invalid Login">
+<arg>${username_lock}</arg>
+<arg>${password}</arg>
+<kw name="Login to Page">
+<arg>${login_invalid}</arg>
+<arg>${pass_invalid}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=user-name</arg>
+<arg>${login}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211125 21:25:39.704" level="INFO">Typing text 'locked_out_user' into text field 'id=user-name'.</msg>
+<status status="PASS" starttime="20211125 21:25:39.704" endtime="20211125 21:25:39.761"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=password</arg>
+<arg>${pass}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211125 21:25:39.761" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
+<status status="PASS" starttime="20211125 21:25:39.761" endtime="20211125 21:25:39.814"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>id=login-button</arg>
+<arg>\\13</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20211125 21:25:39.815" level="INFO">Sending key(s) ('\\13',) to id=login-button element.</msg>
+<msg timestamp="20211125 21:25:40.097" level="INFO">Sending keys \13</msg>
+<status status="PASS" starttime="20211125 21:25:39.814" endtime="20211125 21:25:40.111"/>
+</kw>
+<status status="PASS" starttime="20211125 21:25:39.703" endtime="20211125 21:25:40.111"/>
+</kw>
+<kw name="Check Login Page Opened">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>id=user-name</arg>
+<arg>5</arg>
+<arg>"Error! Page not opened!"</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211125 21:25:40.112" endtime="20211125 21:25:40.132"/>
+</kw>
+<status status="PASS" starttime="20211125 21:25:40.111" endtime="20211125 21:25:40.132"/>
+</kw>
+<status status="PASS" starttime="20211125 21:25:39.703" endtime="20211125 21:25:40.133"/>
+</kw>
+<kw name="Valid Password">
+<arg>${username_problem}</arg>
+<arg>${password}</arg>
+<kw name="Login to Page">
+<arg>${login}</arg>
+<arg>${pass}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=user-name</arg>
+<arg>${login}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211125 21:25:40.135" level="INFO">Typing text 'problem_user' into text field 'id=user-name'.</msg>
+<status status="PASS" starttime="20211125 21:25:40.134" endtime="20211125 21:25:40.179"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=password</arg>
+<arg>${pass}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211125 21:25:40.180" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
+<status status="PASS" starttime="20211125 21:25:40.180" endtime="20211125 21:25:40.222"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>id=login-button</arg>
+<arg>\\13</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20211125 21:25:40.223" level="INFO">Sending key(s) ('\\13',) to id=login-button element.</msg>
+<msg timestamp="20211125 21:25:40.596" level="INFO">Sending keys \13</msg>
+<status status="PASS" starttime="20211125 21:25:40.223" endtime="20211125 21:25:40.613"/>
+</kw>
+<status status="PASS" starttime="20211125 21:25:40.133" endtime="20211125 21:25:40.613"/>
+</kw>
+<kw name="Check Page opened correct">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>id=shopping_cart_container</arg>
+<arg>5</arg>
+<arg>"Error! Page not opened!"</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211125 21:25:40.614" endtime="20211125 21:25:40.634"/>
+</kw>
+<status status="PASS" starttime="20211125 21:25:40.614" endtime="20211125 21:25:40.634"/>
+</kw>
+<status status="PASS" starttime="20211125 21:25:40.133" endtime="20211125 21:25:40.635"/>
+</kw>
+<kw name="Logout from Page">
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>id=react-burger-menu-btn</arg>
+<arg>\\13</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20211125 21:25:40.637" level="INFO">Sending key(s) ('\\13',) to id=react-burger-menu-btn element.</msg>
+<msg timestamp="20211125 21:25:40.931" level="INFO">Sending keys \13</msg>
+<status status="PASS" starttime="20211125 21:25:40.636" endtime="20211125 21:25:40.941"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>id=logout_sidebar_link</arg>
+<arg>4</arg>
+<arg>"Error! Page not opened!"</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211125 21:25:40.942" endtime="20211125 21:25:41.184"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>id=logout_sidebar_link</arg>
+<arg>\\13</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20211125 21:25:41.185" level="INFO">Sending key(s) ('\\13',) to id=logout_sidebar_link element.</msg>
+<msg timestamp="20211125 21:25:41.465" level="INFO">Sending keys \13</msg>
+<status status="PASS" starttime="20211125 21:25:41.184" endtime="20211125 21:25:41.474"/>
+</kw>
+<status status="PASS" starttime="20211125 21:25:40.635" endtime="20211125 21:25:41.475"/>
+</kw>
+<kw name="Valid Password">
+<arg>${username_perf}</arg>
+<arg>${password}</arg>
+<kw name="Login to Page">
+<arg>${login}</arg>
+<arg>${pass}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=user-name</arg>
+<arg>${login}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211125 21:25:41.478" level="INFO">Typing text 'performance_glitch_user' into text field 'id=user-name'.</msg>
+<status status="PASS" starttime="20211125 21:25:41.478" endtime="20211125 21:25:41.543"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=password</arg>
+<arg>${pass}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211125 21:25:41.544" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
+<status status="PASS" starttime="20211125 21:25:41.544" endtime="20211125 21:25:41.582"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>id=login-button</arg>
+<arg>\\13</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20211125 21:25:41.582" level="INFO">Sending key(s) ('\\13',) to id=login-button element.</msg>
+<msg timestamp="20211125 21:25:46.907" level="INFO">Sending keys \13</msg>
+<status status="PASS" starttime="20211125 21:25:41.582" endtime="20211125 21:25:46.968"/>
+</kw>
+<status status="PASS" starttime="20211125 21:25:41.477" endtime="20211125 21:25:46.968"/>
+</kw>
+<kw name="Check Page opened correct">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>id=shopping_cart_container</arg>
+<arg>5</arg>
+<arg>"Error! Page not opened!"</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211125 21:25:46.970" endtime="20211125 21:25:47.012"/>
+</kw>
+<status status="PASS" starttime="20211125 21:25:46.969" endtime="20211125 21:25:47.013"/>
+</kw>
+<status status="PASS" starttime="20211125 21:25:41.475" endtime="20211125 21:25:47.013"/>
+</kw>
+<kw name="Logout from Page">
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>id=react-burger-menu-btn</arg>
+<arg>\\13</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20211125 21:25:47.015" level="INFO">Sending key(s) ('\\13',) to id=react-burger-menu-btn element.</msg>
+<msg timestamp="20211125 21:25:47.319" level="INFO">Sending keys \13</msg>
+<status status="PASS" starttime="20211125 21:25:47.015" endtime="20211125 21:25:47.344"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>id=logout_sidebar_link</arg>
+<arg>4</arg>
+<arg>"Error! Page not opened!"</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211125 21:25:47.344" endtime="20211125 21:25:47.600"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>id=logout_sidebar_link</arg>
+<arg>\\13</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20211125 21:25:47.602" level="INFO">Sending key(s) ('\\13',) to id=logout_sidebar_link element.</msg>
+<msg timestamp="20211125 21:25:47.909" level="INFO">Sending keys \13</msg>
+<status status="PASS" starttime="20211125 21:25:47.600" endtime="20211125 21:25:47.921"/>
+</kw>
+<status status="PASS" starttime="20211125 21:25:47.014" endtime="20211125 21:25:47.922"/>
+</kw>
+<kw name="Valid Password">
+<arg>${username_standard}</arg>
+<arg>${password}</arg>
+<kw name="Login to Page">
+<arg>${login}</arg>
+<arg>${pass}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=user-name</arg>
+<arg>${login}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211125 21:25:47.924" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<status status="PASS" starttime="20211125 21:25:47.924" endtime="20211125 21:25:47.976"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=password</arg>
+<arg>${pass}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211125 21:25:47.977" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
+<status status="PASS" starttime="20211125 21:25:47.976" endtime="20211125 21:25:48.018"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>id=login-button</arg>
+<arg>\\13</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20211125 21:25:48.019" level="INFO">Sending key(s) ('\\13',) to id=login-button element.</msg>
+<msg timestamp="20211125 21:25:48.342" level="INFO">Sending keys \13</msg>
+<status status="PASS" starttime="20211125 21:25:48.018" endtime="20211125 21:25:48.350"/>
+</kw>
+<status status="PASS" starttime="20211125 21:25:47.923" endtime="20211125 21:25:48.350"/>
+</kw>
+<kw name="Check Page opened correct">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>id=shopping_cart_container</arg>
+<arg>5</arg>
+<arg>"Error! Page not opened!"</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211125 21:25:48.351" endtime="20211125 21:25:48.375"/>
+</kw>
+<status status="PASS" starttime="20211125 21:25:48.350" endtime="20211125 21:25:48.375"/>
+</kw>
+<status status="PASS" starttime="20211125 21:25:47.922" endtime="20211125 21:25:48.375"/>
+</kw>
+<kw name="Check Site">
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>identifier=add-to-cart-sauce-labs-backpack</arg>
+<arg>\\13</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20211125 21:25:48.377" level="INFO">Sending key(s) ('\\13',) to identifier=add-to-cart-sauce-labs-backpack element.</msg>
+<msg timestamp="20211125 21:25:48.671" level="INFO">Sending keys \13</msg>
+<status status="PASS" starttime="20211125 21:25:48.376" endtime="20211125 21:25:48.687"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>identifier=add-to-cart-sauce-labs-bike-light</arg>
+<arg>\\13</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20211125 21:25:48.688" level="INFO">Sending key(s) ('\\13',) to identifier=add-to-cart-sauce-labs-bike-light element.</msg>
+<msg timestamp="20211125 21:25:48.972" level="INFO">Sending keys \13</msg>
+<status status="PASS" starttime="20211125 21:25:48.687" endtime="20211125 21:25:48.989"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>identifier=add-to-cart-sauce-labs-bolt-t-shirt</arg>
+<arg>\\13</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20211125 21:25:48.990" level="INFO">Sending key(s) ('\\13',) to identifier=add-to-cart-sauce-labs-bolt-t-shirt element.</msg>
+<msg timestamp="20211125 21:25:49.268" level="INFO">Sending keys \13</msg>
+<status status="PASS" starttime="20211125 21:25:48.989" endtime="20211125 21:25:49.291"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>identifier=add-to-cart-sauce-labs-fleece-jacket</arg>
+<arg>\\13</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20211125 21:25:49.291" level="INFO">Sending key(s) ('\\13',) to identifier=add-to-cart-sauce-labs-fleece-jacket element.</msg>
+<msg timestamp="20211125 21:25:49.578" level="INFO">Sending keys \13</msg>
+<status status="PASS" starttime="20211125 21:25:49.291" endtime="20211125 21:25:49.596"/>
+</kw>
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<arg>class=shopping_cart_badge</arg>
+<arg>4</arg>
+<arg>5</arg>
+<arg>"Error!"</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" starttime="20211125 21:25:49.597" endtime="20211125 21:25:49.631"/>
+</kw>
+<status status="PASS" starttime="20211125 21:25:48.376" endtime="20211125 21:25:49.631"/>
+</kw>
+<kw name="Logout from Page">
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>id=react-burger-menu-btn</arg>
+<arg>\\13</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20211125 21:25:49.633" level="INFO">Sending key(s) ('\\13',) to id=react-burger-menu-btn element.</msg>
+<msg timestamp="20211125 21:25:49.933" level="INFO">Sending keys \13</msg>
+<status status="PASS" starttime="20211125 21:25:49.632" endtime="20211125 21:25:49.948"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>id=logout_sidebar_link</arg>
+<arg>4</arg>
+<arg>"Error! Page not opened!"</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211125 21:25:49.948" endtime="20211125 21:25:49.973"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>id=logout_sidebar_link</arg>
+<arg>\\13</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20211125 21:25:49.973" level="INFO">Sending key(s) ('\\13',) to id=logout_sidebar_link element.</msg>
+<msg timestamp="20211125 21:25:50.275" level="INFO">Sending keys \13</msg>
+<status status="PASS" starttime="20211125 21:25:49.973" endtime="20211125 21:25:50.283"/>
+</kw>
+<status status="PASS" starttime="20211125 21:25:49.631" endtime="20211125 21:25:50.284"/>
+</kw>
+<kw name="Check Login Page Opened">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>id=user-name</arg>
+<arg>5</arg>
+<arg>"Error! Page not opened!"</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211125 21:25:50.284" endtime="20211125 21:25:50.310"/>
+</kw>
+<status status="PASS" starttime="20211125 21:25:50.284" endtime="20211125 21:25:50.310"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20211125 21:25:50.310" endtime="20211125 21:25:51.066"/>
+</kw>
+<doc>Testing login in few cases
+1) invalid login
+2) invalid passwod
+3) empty pass
+4) empty login
+5) valid login and password
+6) check the adding to shopping container and check corectness
+7) logout</doc>
+<status status="PASS" starttime="20211125 21:25:34.122" endtime="20211125 21:25:51.066"/>
+</test>
+<doc>This is a basic test</doc>
+<status status="PASS" starttime="20211125 21:25:33.951" endtime="20211125 21:25:51.069"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Lab2">Lab2</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

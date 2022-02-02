@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.2 (Python 3.9.7 on linux)" generated="20211128 15:50:01.472" rpa="false" schemaversion="2">
+<suite id="s1" name="Lab3 ftp" source="/home/kierin/Documents/Repozytoria/0ZUT/Testowanie_oprogramowania/robot_framework/ZUT_2021/robot_demo/FTP/Lab3_ftp.robot">
+<test id="s1-t1" name="[TC-FTP] Ftp login">
+<kw name="Ftp Connect" library="FtpLibrary">
+<arg>90.130.70.73</arg>
+<arg>anonymous</arg>
+<arg>anonymous</arg>
+<doc>Constructs FTP object, opens a connection and login. TLS support is optional.
+Call this function before any other (otherwise raises exception).
+Returns server output.
+Parameters:
+    - host - server host address
+    - user(optional) - FTP user name. If not given, 'anonymous' is used.
+    - password(optional) - FTP password. If not given, 'anonymous@' is used.
+    - port(optional) - TCP port. By default 21.
+    - timeout(optional) - timeout in seconds. By default 30.
+    - connId(optional) - connection identifier. By default equals 'default'
+    - tls(optional) - TLS connections flag. By default False
+    - mode(optional) - set the transfer mode to 'active' or 'passive'. By default 'passive'</doc>
+<msg timestamp="20211128 15:50:31.734" level="FAIL">FtpLibraryError: Socket error exception occured.</msg>
+<status status="FAIL" starttime="20211128 15:50:01.527" endtime="20211128 15:50:31.734"/>
+</kw>
+<kw name="Download File" library="FtpLibrary">
+<arg>1KB.zip</arg>
+<doc>Downloads file from current directory on FTP server in binary mode. If
+localFilePath is not given, file is saved in current local directory (by
+default folder containing robot framework project file) with the same name
+as source file. Returns server output
+Parameters:
+- remoteFileName - file name on FTP server
+- localFilePath (optional) - local file name or path where remote file should be saved.
+- connId(optional) - connection identifier. By default equals 'default'
+localFilePath variable can have following meanings:
+1. file name (will be saved in current default directory);
+2. full path (dir + file name)
+3. dir path (original file name will be added)
+Examples:
+| download file | a.txt |  |  |
+| download file | a.txt | b.txt | connId=ftp1 |
+| download file | a.txt | D:/rfftppy/tmp |  |
+| download file | a.txt | D:/rfftppy/tmp/b.txt |  |
+| download file | a.txt | D:\rfftppy\tmp\c.txt |  |</doc>
+<status status="NOT RUN" starttime="20211128 15:50:31.735" endtime="20211128 15:50:31.735"/>
+</kw>
+<kw name="Ftp Close" library="FtpLibrary">
+<doc>Closes FTP connection. Returns None.
+Parameters:
+- connId(optional) - connection identifier. By default equals 'default'</doc>
+<status status="NOT RUN" starttime="20211128 15:50:31.735" endtime="20211128 15:50:31.735"/>
+</kw>
+<doc>Testing login in few cases</doc>
+<status status="FAIL" starttime="20211128 15:50:01.527" endtime="20211128 15:50:31.736">FtpLibraryError: Socket error exception occured.</status>
+</test>
+<doc>This is FTP Test</doc>
+<status status="FAIL" starttime="20211128 15:50:01.473" endtime="20211128 15:50:31.737"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Lab3 ftp">Lab3 ftp</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
